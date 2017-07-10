@@ -30,9 +30,9 @@ class Text(Step):
 
     def get_absolute_url(self):
         return reverse('courses:text', kwargs={
-            'course_pk': self.course_id,
-            'step_pk': self.id
-        })
+                'course_pk': self.course_id,
+                'step_pk': self.id
+            })
 
 class Quiz(Step):
     total_questions = models.IntegerField(default=4)
@@ -40,9 +40,9 @@ class Quiz(Step):
         verbose_name_plural = "Quizzes"
     def get_absolute_url(self):
         return reverse('courses:quiz', kwargs={
-            'course_pk': self.course_id,
-            'step_pk': self.id
-        })
+                'course_pk': self.course_id,
+                'step_pk': self.id
+            })
 
 class Question(models.Model):
     quiz = models.ForeignKey(Quiz)
@@ -74,6 +74,6 @@ class Answer(models.Model):
     class Meta:
         ordering = ['order',]
 
-    def _str__(self):
+    def __str__(self):
         return self.text
 
