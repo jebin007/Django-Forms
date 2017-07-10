@@ -14,12 +14,11 @@ class QuizForm(forms.ModelForm):        #we are using forms.ModelForm instead po
 
 class TrueFalseQuestionForm(forms.ModelForm):
     class Meta:
-        models = models.TrueFalseQuestion
+        model = models.TrueFalseQuestion
         fields = ['order', 'prompt']
 
 class MultipleChoiceQuestionForm(forms.ModelForm):
     class Meta:
         model = models.MultipleChoiceQuestion
         fields = ['order', 'prompt', 'shuffle_answers']
-        
 

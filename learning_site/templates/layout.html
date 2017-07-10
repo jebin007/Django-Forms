@@ -29,9 +29,9 @@
         </nav>
         {% if messages %}
             <div class="row">
-                <div class="'small-6 small-centered-columns">
+                <div class="small-6 small-centered columns">
                     {% for message in messages %}
-                        <div data-alert class="alert-box {{ message.tags }} radius">
+                        <div data-alert class="callout {{ message.tags }}">
                             {{ message }}
                             <a href="#" class="close">&times;</a>
                         </div>
